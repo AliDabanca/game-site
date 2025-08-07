@@ -1,6 +1,13 @@
-const express = require('express');
-const path = require('path');
-require('dotenv').config();
+import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import dns from 'dns';
+import dotenv from 'dotenv';
+dotenv.config();
+
+// __dirname tanımlaması ES module için
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -8,16 +15,15 @@ const port = process.env.PORT || 3000;
 // JSON veri almak için
 app.use(express.json());
 
-
 // Statik dosyalar (CSS, JS, img vs.)
 app.use(express.static(path.join(__dirname, 'public')));
 
-//  Ana sayfa artık login'e yönlendirsin
+// Ana sayfa artık login'e yönlendirsin
 app.get('/', (req, res) => {
   res.redirect('/login');
 });
 
-//  Login ve Register sayfaları
+// Login ve Register sayfaları
 app.get('/login', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'login.html'));
 });
@@ -31,8 +37,7 @@ app.get('/my-ip', (req, res) => {
   res.send(ip);
 });
 
-import dns from 'dns';
-
+// Test DNS lookup endpoint
 app.get('/test-dns', (req, res) => {
   dns.lookup('db.xgwwfuzcuaafjjqxxtgu.supabase.co', (err, address) => {
     if (err) {
@@ -45,12 +50,12 @@ app.get('/test-dns', (req, res) => {
   });
 });
 
-//  Girişten sonra yönlendirilecek oyunlar sayfası
+// Oyunlar sayfası
 app.get('/games', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views', 'index.html')); // Oyunlar listesi 
+  res.sendFile(path.join(__dirname, 'views', 'index.html')); // Oyunlar listesi
 });
 
-//  Oyun sayfaları
+// Oyun sayfaları
 app.get('/game1', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/games/game1.html'));
 });
@@ -67,19 +72,18 @@ app.get('/game5', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/games/game5.html'));
 });
 
-//  API rotaları
-const authRoutes = require('./routes/auth');
+// Diğer route dosyalarını import et (CommonJS değil, ES Module olarak yapman lazım)
+
+// Eğer routes klasöründeki dosyaların da CommonJS ise onları ES Module’a çevirmen gerekir.
+// Örnek olarak auth.js ES Module ise:
+
+import authRoutes from './routes/auth.js';
+import userRoutes from './routes/user.js';
+import scoreRoutes from './routes/scores.js';
+
 app.use('/api/auth', authRoutes);
-
-const userRoutes = require('./routes/user');
-app.use('/api', userRoutes); 
-
-const scoreRoutes = require('./routes/scores');
+app.use('/api', userRoutes);
 app.use('/api/scores', scoreRoutes);
-
-
-
-
 
 app.listen(port, '0.0.0.0', () => {
   console.log(`✅ Sunucu herkese açık: http://<sunucu-ip-adresi>:${port}`);

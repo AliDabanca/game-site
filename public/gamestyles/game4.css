@@ -1,0 +1,42 @@
+   body {
+       font-family: Arial, sans-serif;
+       background: #111;
+       color: white;
+       text-align: center;
+       padding: 20px;
+   }
+
+   canvas {
+       background: #222;
+       border: 3px solid #0f0;
+       margin-top: 20px;
+   }
+
+   #scoreDisplay {
+       font-size: 1.5rem;
+       margin: 15px 0;
+   }
+
+   button {
+       padding: 10px 20px;
+       font-size: 1rem;
+       border-radius: 8px;
+       background-color: crimson;
+       color: white;
+       border: none;
+       cursor: pointer;
+   }
+
+   table {
+       margin: 30px auto;
+       border-collapse: collapse;
+       width: 80%;
+       color: #fff;
+   }
+
+   th,
+   td {
+       padding: 10px;
+       border-bottom: 1px solid #555;
+       text-align: center;
+   }

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hafıza Kartı Oyunu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/gamestyles/game3.css">
+</head>
+
+<body>
+  <h1>Hafıza Kartı Oyunu</h1>
+
+  <div class="game-container">
+    <p>Kullanıcı: <strong id="username">Yükleniyor...</strong></p>
+    <div class="scoreboard">
+      <div>Hamle: <span id="moves">0</span></div>
+      <div>Skor: <span id="score">0</span></div>
+      <div>Süre: <span id="timer">0</span> sn</div>
+    </div>
+
+    <div class="grid" id="gameBoard"></div>
+    <button id="restartBtn" onclick="yenidenBasla()"><i class="fa-solid fa-arrows-rotate"></i> Yeniden Başla</button>
+
+    <div id="highScores">
+      <h3 style="color: #fff; margin-top: 30px;">📋 En İyi Skorlar</h3>
+      <table id="scoreTable">
+        <thead>
+          <tr>
+            <th>Skor</th>
+            <th>Hamle</th>
+            <th>Süre</th>
+            <th>Tarih</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="/script/game3.js"></script>
+</body>
+
+</html>

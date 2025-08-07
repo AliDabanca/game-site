@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Giriş Yap</title>
+  <meta http-equiv="Cache-Control" content="no-store" />
+  <link rel="stylesheet" href="/css/login.css">
+</head>
+
+<body>
+  <div class="logo-header">
+    <img src="/images/logo.png" alt="Oyunlar 2 Logo">
+  </div>
+
+  <div class="auth-container">
+    <h2>Giriş Yap</h2>
+
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Kullanıcı Adı" required />
+      <input type="password" id="password" placeholder="Şifre" required />
+      <button type="submit">Giriş Yap</button>
+      <p id="result"></p>
+      <p class="bottom-link">
+        <a href="/register">Hesabınız yok mu? Kayıt olun</a>
+      </p>
+    </form>
+  </div>
+
+  <script src="/script/login.js"></script>
+</body>
+
+</html>

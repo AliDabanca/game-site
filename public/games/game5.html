@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tetris</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/gamestyles/game5.css">
+</head>
+
+<body>
+  <h1>🧱 Tetris</h1>
+  <canvas id="tetris" width="240" height="400"></canvas>
+  <div id="score">Skor: 0</div>
+  <br>
+  <button onclick="startGame()"><i class="fa-solid fa-arrows-rotate"></i> Yeniden Başla</button>
+
+  <h2>En Yüksek Skorlar</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Skor</th>
+        <th>Tarih</th>
+      </tr>
+    </thead>
+    <tbody id="scoreTable"></tbody>
+  </table>
+
+  <script src="/script/game5.js"></script>
+
+</body>
+
+</html>

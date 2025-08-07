@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Oyunlar 2</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+<button id="logoutBtn" title="Çıkış Yap">
+  <img src="/images/logout-icon.svg" alt="Çıkış" />
+</button>
+
+<body>
+
+  <header class="top-bar">
+    <div class="user-info">
+      <span id="welcome-user">Hoş geldin</span>
+
+    </div>
+  </header>
+
+  <h1><img src="/images/logo.png" alt="Oyunlar 2 Logo"></h1>
+
+  <div class="main-container">
+    <div class="left-panel">
+      <div class="game-grid">
+        <div class="game-card">
+          <div class="game-icon"><img src="/images/rps.png" alt="RPS"></div>
+          <h3>Taş Kağıt Makas</h3>
+          <p>Bilgisayarla taş-kağıt-makas oyna. Aman dikkat et!</p>
+          <a href="/game1">Oyna</a>
+        </div>
+        <div class="game-card">
+          <div class="game-icon"><img src="/images/guess.png" alt="Guess"></div>
+          <h3>Sayı Tahmini</h3>
+          <p>Bilgisayarın tuttuğu sayıyı tahmin et. Çok deneme yapma!</p>
+          <a href="/game2">Oyna</a>
+        </div>
+        <div class="game-card">
+          <div class="game-icon"><img src="/images/memory.png" alt="Memory"></div>
+          <h3>Hafıza Kartları</h3>
+          <p>Kartlar eşlerini kaybetmiş. Sevenleri kavuştur.</p>
+          <a href="/game3">Oyna</a>
+        </div>
+      </div>
+
+      <div class="bottom-row">
+        <div class="game-card">
+          <div class="game-icon"><img src="/images/snake.png" alt="Snake"></div>
+          <h3>Yılan Oyunu</h3>
+          <p>Duvarlara çarpmadan yılanını besle ve büyüt. Büyüdükçe zorlaşıyor kendi kuyruğuna basma sakın!</p>
+          <a href="/game4">Oyna</a>
+        </div>
+        <div class="game-card">
+          <div class="game-icon"><img src="/images/tetris.png" alt="Tetris"></div>
+          <h3>Tetris</h3>
+          <p>Yıkabildiğin kadar satır yık. Aman kaçak kat çıkma!</p>
+          <a href="/game5">Oyna</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="leaderboardsContainer"></div>
+  </div>
+
+
+  <script src="/script/index.js"></script>
+</body>
+
+</html>

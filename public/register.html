@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Kayıt Ol</title>
+  <link rel="stylesheet" href="/css/login.css">
+</head>
+
+<body>
+  <div class="logo-header">
+    <img src="/images/logo.png" alt="Oyunlar 2 Logo">
+  </div>
+
+  <div class="auth-container">
+    <h2>Kayıt Ol</h2>
+
+    <form id="registerForm">
+      <input type="text" id="username" placeholder="Kullanıcı Adı" required />
+      <input type="password" id="password" placeholder="Şifre" required />
+      <button type="submit">Kayıt Ol</button>
+      <p id="result"></p>
+      <p class="bottom-link">
+        <a href="/login">Zaten hesabınız var mı? Giriş yap</a>
+      </p>
+    </form>
+  </div>
+
+  <script src="/script/register.js"></script>
+</body>
+
+</html>

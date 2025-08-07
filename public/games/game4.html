@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>🐍 Yılan Oyunu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/gamestyles/game4.css">
+</head>
+
+<body>
+  <h1>🐍 Yılan Oyunu</h1>
+  <div id="scoreDisplay">Skor: 0</div>
+  <canvas id="gameCanvas" width="400" height="400"></canvas><br>
+  <button onclick="startGame()"><i class="fa-solid fa-arrows-rotate"></i> Yeniden Başla</button>
+  <p>Kullanıcı: <strong id="username">Yükleniyor...</strong></p>
+
+  <div id="highScores">
+    <h3>📋 En İyi Skorlar</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Skor</th>
+          <th>Tarih</th>
+        </tr>
+      </thead>
+      <tbody id="scoreTable"></tbody>
+    </table>
+  </div>
+
+  <script src="/script/game4.js"></script>
+</body>
+
+</html>

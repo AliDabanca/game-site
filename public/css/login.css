@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1c2a4a, #2d4073);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+.logo-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.logo-header img {
+    height: 150px;
+    margin-bottom: 8px;
+}
+
+.logo-header h1 {
+    font-size: 28px;
+    color: #ffda6b;
+    margin: 0;
+    font-weight: bold;
+}
+
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+button {
+    padding: 12px;
+    background-color: #ffc107;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e0ac00;
+}
+
+.bottom-link {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+a {
+    color: #ffda6b;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#result {
+    text-align: center;
+    font-size: 14px;
+    color: #f99;
+}

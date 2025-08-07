@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Taş Kağıt Makas</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/gamestyles/game1.css">
+</head>
+
+<body>
+  <h1>Taş Kağıt Makas</h1>
+
+  <div><strong>Kullanıcı: <span id="username">Yükleniyor...</span></strong></div>
+
+  <div class="buttons">
+    <button onclick="play('taş')"><i class="fas fa-hand-rock"></i> Taş</button>
+    <button onclick="play('kağıt')"><i class="fas fa-hand-paper"></i> Kağıt</button>
+    <button onclick="play('makas')"><i class="fas fa-hand-scissors"></i> Makas</button>
+    <button onclick="restart()"><i class="fa-solid fa-arrows-rotate"></i> Yeniden Başla</button>
+  </div>
+
+  <div id="result"></div>
+  <div id="score"><span id="playerName">Sen</span>: 0 | Bilgisayar: 0</div>
+
+  <div id="highScores">
+    <h3>Skor Geçmişi</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Skor</th>
+          <th>Tarih</th>
+        </tr>
+      </thead>
+      <tbody id="scoreTable"></tbody>
+    </table>
+
+
+
+  </div>
+
+
+  <script src="/script/game1.js"></script>
+</body>
+
+</html>

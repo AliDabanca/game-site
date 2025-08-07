@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sayı Tahmin Oyunu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/gamestyles/game2.css">
+</head>
+
+<body>
+  <h1>Sayı Tahmin Oyunu</h1>
+  <p>Kullanıcı: <strong id="username">Yükleniyor...</strong></p>
+
+  <p>1 ile 100 arasında bir sayı tuttum. Kaç denemede bulabilirsin?</p>
+
+  <input type="number" id="guessInput" placeholder="Tahminini gir" min="1" max="100">
+  <button onclick="checkGuess()">Tahmin Et</button>
+
+  <p id="feedback"></p>
+
+  <h3>Skor Geçmişi</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Deneme</th>
+        <th>Tarih</th>
+      </tr>
+    </thead>
+    <tbody id="scoreTable"></tbody>
+  </table>
+
+  <script src="/script/game2.js"></script>
+</body>
+
+</html>

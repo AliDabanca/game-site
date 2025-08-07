@@ -1,3 +1,5 @@
+import dns from 'dns';
+
 const express = require('express');
 const path = require('path');
 require('dotenv').config();
@@ -30,6 +32,19 @@ app.get('/my-ip', (req, res) => {
   const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
   res.send(ip);
 });
+
+app.get('/test-dns', (req, res) => {
+  dns.lookup('db.xgwwfuzcuaafjjqxxtgu.supabase.co', (err, address) => {
+    if (err) {
+      console.error('DNS lookup failed:', err);
+      res.status(500).send('DNS lookup failed: ' + err.message);
+    } else {
+      console.log('Supabase IP address:', address);
+      res.send('Supabase IP address: ' + address);
+    }
+  });
+});
+
 //  Girişten sonra yönlendirilecek oyunlar sayfası
 app.get('/games', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'index.html')); // Oyunlar listesi 

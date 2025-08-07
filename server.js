@@ -26,6 +26,10 @@ app.get('/register', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'register.html'));
 });
 
+app.get('/my-ip', (req, res) => {
+  const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+  res.send(ip);
+});
 //  Girişten sonra yönlendirilecek oyunlar sayfası
 app.get('/games', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'index.html')); // Oyunlar listesi 

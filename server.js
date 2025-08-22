@@ -48,6 +48,16 @@ app.get('/game5', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/games/game5.html'));
 });
 
+app.get('/test-db', async (req, res) => {
+  try {
+    const result = await pool.query('SELECT NOW()');
+    res.send(result.rows[0]);
+  } catch (err) {
+    console.error("DB bağlantı hatası:", err);
+    res.status(500).send("DB bağlantı hatası: " + err.message);
+  }
+});
+
 //  API rotaları
 const authRoutes = require('./routes/auth');
 app.use('/api/auth', authRoutes);

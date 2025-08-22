@@ -1,3 +1,5 @@
+Test linki: https://game-site-a2k0.onrender.com
+
 Bu proje, kullanıcıların oyunlara giriş yapıp skorlarını kaydedebildiği ve liderlik tablolarını görebildiği bir sistemdir. Tüm bu işlemleri "API" adı verilen arka uç yapısı sağlar.
 
 1. Kullanıcı Kaydı ve Girişi (Auth)
